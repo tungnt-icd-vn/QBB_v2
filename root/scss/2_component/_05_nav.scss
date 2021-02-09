@@ -6,8 +6,10 @@
 	&__list{
 		@include flex;
 		padding: 27px 0;
-		+ li{
-			margin-left: 39px;
+	  	li {
+			+ li{
+				margin-left: 39px;
+			  }
 		}
 		a{
 			color: $color2;
