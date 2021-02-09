@@ -1,36 +1,74 @@
 /*------------------------------------------------------------
-	Navi
-------------------------------------------------------------*/
-.c-nav{
-	transition: 0.3s ease-in-out;
-	&__list{
-		@include flex;
-		padding: 27px 0;
-	  	li {
-			+ li{
-				margin-left: 39px;
-			  }
-		}
-		a{
-			color: $color2;
-			text-decoration: none;
-			text-transform: uppercase;
-			font-weight: normal;
-			font-family: 'Poppins', sans-serif;
-			font-size: 16px;
-		}
-		.is-child{
-			padding-right: 20px;
-			position: relative;
-		}
-		.icon-child{
-			width: 9px;
-			height: 6px;
-			@include flex-center;
-			position: absolute;
-			right: 0;
-			top: calc(50% - 3px);
-		}
-	}
-
-}
+        Navi
+        ------------------------------------------------------------*/
+        .c-nav {
+            transition: 0.3s ease-in-out;
+            &__list {
+              @include flex;
+              > li {
+                  padding: 27px 0;
+                + li {
+                  margin-left: 39px;
+                }
+                &:hover {
+                  @include min(769px) {
+                    transform: scale(1);
+                    opacity: 1;
+                  }
+                }
+              }
+              a {
+                color: $color2;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-family: "Poppins", sans-serif;
+                font-size: 16px;
+              }
+              .is-child {
+                padding-right: 20px;
+                position: relative;
+                &:hover {
+                  .sub-menu {
+                    transform: scale(1);
+                    transform-origin: top;
+                    opacity: 1;
+                  }
+                }
+                .sub-menu {
+                  width: 240px;
+                  position: absolute;
+                  top: 100%;
+                  left: calc(50% - 120px);
+                  transform: scale(0);
+                  transform-origin: top;
+                  opacity: 0;
+                  z-index: 4;
+                  padding: 5px 15px 5px;
+                  background: #95030e;
+                  transition: 0.3s ease-in-out;
+                  li {
+                    width: 100%;
+                    padding: 0;
+                    position: relative;
+                    a {
+                      display: block;
+                      color: $color2;
+                      text-align: left;
+                      line-height: 1;
+                      padding: 15px 0;
+                      position: relative;
+                    }
+                  }
+                }
+              }
+            }
+            .icon-child {
+              width: 9px;
+              height: 6px;
+              @include flex-center;
+              position: absolute;
+              right: 0;
+              top: calc(50% - 3px);
+            }
+          }
