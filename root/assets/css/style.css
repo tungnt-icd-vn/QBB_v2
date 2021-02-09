@@ -217,10 +217,23 @@ form label {
       left: 10px;
       transition: 0.3s ease-in-out; }
       .c-header__toggle span:before {
-        content: '--';
-        display: block; }
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: calc(50% - 1px);
+        transition: 0.3s ease-in-out;
+        margin-top: -10px; }
       .c-header__toggle span:after {
-        content: '--'; }
+        content: '';
+        width: 30px;
+        height: 2px;
+        background: #fff;
+        position: absolute;
+        top: calc(50% - 1px);
+        transition: 0.3s ease-in-out;
+        margin-top: 10px; }
     @media screen and (max-width: 768px) {
       .c-header__toggle {
         display: block; } }

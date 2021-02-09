@@ -34,11 +34,24 @@
 		left: 10px;
 		transition: 0.3s ease-in-out;
 		&:before {
-		  content: '--';
-		  display: block;
+			content: '';
+			width: 30px;
+			height: 2px;
+			background: $color2;
+			position: absolute;
+			top: calc(50% - 1px);
+			transition: 0.3s ease-in-out;
+			margin-top: -10px;
 		}
 		&:after {
-		  content: '--';
+			content: '';
+			width: 30px;
+			height: 2px;
+			background: $color2;
+			position: absolute;
+			top: calc(50% - 1px);
+			transition: 0.3s ease-in-out;
+			margin-top: 10px;
 		}
 	  }
 	  @include max(768px) {
