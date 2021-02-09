@@ -207,6 +207,10 @@ form label {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
     font-size: 24px; }
+  @media screen and (max-width: 768px) {
+    .c-header {
+      padding: 10px 0;
+      position: relative; } }
 
 /*------------------------------------------------------------
 	Footer
@@ -299,6 +303,17 @@ form label {
         position: absolute;
         right: 0;
         top: calc(50% - 3px); }
+  @media screen and (max-width: 768px) {
+    .c-nav {
+      background: #c1000f;
+      position: fixed;
+      top: 71px;
+      right: 0;
+      width: 100%;
+      z-index: 10;
+      padding: 0 20px 20px;
+      opacity: 0;
+      border-top: 1px solid #fff; } }
 
 /*------------------------------------------------------------
 	Table
