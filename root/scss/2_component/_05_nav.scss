@@ -4,17 +4,30 @@
 .c-nav{
 	transition: 0.3s ease-in-out;
 	&__list{
-		display: flex;
-		flex-wrap: wrap;
+		@include flex;
 		padding: 27px 0;
+		+ li{
+			margin-left: 39px;
+		}
 		a{
 			color: $color2;
 			text-decoration: none;
 			text-transform: uppercase;
 			font-weight: normal;
-    		font-family: 'Poppins', sans-serif;
-			padding-right: 15px;
+			font-family: 'Poppins', sans-serif;
 			font-size: 16px;
+		}
+		.is-child{
+			padding-right: 20px;
+			position: relative;
+		}
+		.icon-child{
+			width: 9px;
+			height: 6px;
+			@include flex-center;
+			position: absolute;
+			right: 0;
+			top: calc(50% - 3px);
 		}
 	}
 
