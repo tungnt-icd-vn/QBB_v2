@@ -13,7 +13,9 @@
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		padding: 17px 0;
+		@include max(1200px) {
+			padding: 0 15px;
+		}
 	}
 	&__toggle{
 		position: absolute;

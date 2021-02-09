@@ -196,8 +196,10 @@ form label {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 17px 0; }
+    flex-wrap: wrap; }
+    @media screen and (max-width: 1200px) {
+      .c-header__box {
+        padding: 0 15px; } }
   .c-header__toggle {
     position: absolute;
     top: 10px;
@@ -237,7 +239,8 @@ form label {
   transition: 0.3s ease-in-out; }
   .c-nav__list {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding: 27px 0; }
     .c-nav__list a {
       color: #fff;
       text-decoration: none;
