@@ -79,7 +79,8 @@ transition: 0.3s ease-in-out;
     }
 	@include max(768px) {
 		background: #c1000f;
-        position: fixed;
+        position: static;
+        display: none;
         top: 71px;
         right: 0;
         width: 100%;
@@ -88,4 +89,10 @@ transition: 0.3s ease-in-out;
         opacity: 0;
         border-top: 1px solid #fff;
 	}
+}
+.c-nav.is-active{
+    @include max(768px) {
+        position: fix;
+        display: inline-block;
+    }
 }

@@ -237,6 +237,16 @@ form label {
     @media screen and (max-width: 768px) {
       .c-header__toggle {
         display: block; } }
+  .c-header__toggle.is-active span {
+    background: #c1000f; }
+    .c-header__toggle.is-active span:before {
+      transform: rotate(135deg);
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      margin-top: 0; }
+    .c-header__toggle.is-active span:after {
+      transform: rotate(225deg);
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      margin-top: 0; }
   @media screen and (max-width: 768px) {
     .c-header {
       padding: 10px 0;
@@ -336,7 +346,8 @@ form label {
   @media screen and (max-width: 768px) {
     .c-nav {
       background: #c1000f;
-      position: fixed;
+      position: static;
+      display: none;
       top: 71px;
       right: 0;
       width: 100%;
@@ -344,6 +355,11 @@ form label {
       padding: 0 20px 20px;
       opacity: 0;
       border-top: 1px solid #fff; } }
+
+@media screen and (max-width: 768px) {
+  .c-nav.is-active {
+    position: fix;
+    display: inline-block; } }
 
 /*------------------------------------------------------------
 	Table
