@@ -8,22 +8,15 @@
 	background: $colorred;
 	transition: 0.3s ease-in-out;
 	&__toggle{
-
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		cursor: pointer;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 24px;
 	}
 	&__nav{
-		
+
 	}
 }
-
-.PRODUCT {
-	font-size: 16px;
-	font-family: "Poppins";
-	color: rgb(255, 255, 255);
-	line-height: 2.25;
-	text-align: justifyLeft;
-	position: absolute;
-	left: 825.768px;
-	top: 27.5px;
-	z-index: 6;
-  }
   
