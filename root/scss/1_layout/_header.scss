@@ -5,6 +5,25 @@
 	width: 100%;
 	padding: 50px 0;
 	text-align: center;
-	background: $color3;
+	background: $colorred;
 	transition: 0.3s ease-in-out;
+	&__toggle{
+
+	}
+	&__nav{
+		
+	}
 }
+
+.PRODUCT {
+	font-size: 16px;
+	font-family: "Poppins";
+	color: rgb(255, 255, 255);
+	line-height: 2.25;
+	text-align: justifyLeft;
+	position: absolute;
+	left: 825.768px;
+	top: 27.5px;
+	z-index: 6;
+  }
+  
