@@ -7,3 +7,11 @@
 	color: $color1;
 	@include flex-center;
 }
+.l-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	@include max(1200px) {
+		padding: 0 15px;
+	}
+ }

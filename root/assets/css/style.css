@@ -174,15 +174,30 @@ form label {
   justify-content: center;
   flex-wrap: wrap; }
 
+.l-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1200px) {
+    .l-container {
+      padding: 0 15px; } }
+
 /*------------------------------------------------------------
 	Header
 ------------------------------------------------------------*/
 .c-header {
   width: 100%;
-  padding: 50px 0;
-  text-align: center;
   background: #c1000f;
   transition: 0.3s ease-in-out; }
+  .c-header__box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 17px 0; }
   .c-header__toggle {
     position: absolute;
     top: 10px;
@@ -219,15 +234,18 @@ form label {
 	Navi
 ------------------------------------------------------------*/
 .c-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  font-size: 16px;
-  font-family: "Poppins";
-  color: #fff;
-  line-height: 2.25; }
+  transition: 0.3s ease-in-out; }
   .c-nav__list {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
+    .c-nav__list a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-family: 'Poppins', sans-serif;
+      padding-right: 15px;
+      font-size: 16px; }
 
 /*------------------------------------------------------------
 	Table
