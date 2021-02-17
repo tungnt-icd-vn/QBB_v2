@@ -441,12 +441,9 @@ body {
     @media screen and (max-width: 768px) {
       .p-terms .p-term {
         padding: 44px 50px 102px; } }
-    @media screen and (max-width: 578px) {
+    @media screen and (max-width: 767px) {
       .p-terms .p-term {
-        padding: 44px 30px 102px; } }
-    @media screen and (max-width: 400px) {
-      .p-terms .p-term {
-        padding: 44px 20px 102px; } }
+        padding: 44px 15px 30px; } }
     .p-terms .p-term::before {
       content: '';
       width: 100%;
@@ -481,6 +478,10 @@ body {
         right: 0;
         top: 0;
         z-index: 0; }
+      @media screen and (max-width: 767px) {
+        .p-terms .p-term__box {
+          margin: 30px 0;
+          padding: 90px 20px 22px 30px; } }
     .p-terms .p-term__ttl {
       position: absolute;
       top: 20px;
@@ -497,15 +498,20 @@ body {
       @media screen and (max-width: 768px) {
         .p-terms .p-term__ttl {
           font-size: 20px; } }
-      @media screen and (max-width: 578px) {
+      @media screen and (max-width: 767px) {
         .p-terms .p-term__ttl {
           width: calc(100% - 40px);
           background-size: 100%;
           left: 3px;
-          padding-top: 5px; } }
+          padding-top: 5px;
+          top: 35px; } }
     .p-terms .p-term__items {
       margin-left: 11px;
       margin-right: 10px; }
+      @media screen and (max-width: 767px) {
+        .p-terms .p-term__items {
+          margin-left: 0;
+          margin-right: 0; } }
       .p-terms .p-term__items--ul02 {
         padding-top: 13.5px;
         padding-bottom: 19.5px; }
@@ -517,10 +523,12 @@ body {
           text-align-last: left;
           position: relative;
           z-index: 3;
-          font-size: 16px;
           font-family: "Kozuka Gothic Pr6N";
           font-weight: 500;
           letter-spacing: -0.8px; }
+          @media screen and (max-width: 767px) {
+            .p-terms .p-term__items--ul02 li {
+              font-size: 14px; } }
           .p-terms .p-term__items--ul02 li a {
             color: #c1000f; }
       .p-terms .p-term__items--ul01 {
@@ -533,9 +541,11 @@ body {
           text-align-last: left;
           position: relative;
           z-index: 3;
-          font-size: 16px;
           font-family: "Kozuka Gothic Pr6N";
           letter-spacing: -0.8px; }
+          @media screen and (max-width: 767px) {
+            .p-terms .p-term__items--ul01 li {
+              font-size: 14px; } }
           .p-terms .p-term__items--ul01 li a {
             color: #c1000f; }
       .p-terms .p-term__items:not(:first-child):not(:last-child) {
