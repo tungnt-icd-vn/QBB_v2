@@ -1,81 +1,82 @@
 /*------------------------------------------------------------
 	Header
 ------------------------------------------------------------*/
+
 .c-header {
-	width: 100%;
-	background: $colorred;
-	transition: 0.3s ease-in-out;
-	&__box {
-	  max-width: 1200px;
-	  width: 100%;
-	  margin: 0 auto;
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  flex-wrap: wrap;
-	  @include max(1200px) {
-		padding: 0 15px;
-	  }
-	}
-	&__toggle {
-	  position: relative;
-	  width: 50px;
-	  height: 40px;
-	  border-radius: 5px;
-	  border: 1px solid $color2;
-	  overflow: hidden;
-	  span {
-		display: block;
-		width: 30px;
-		height: 2px;
-		background: $color2;
-		position: absolute;
-		top: calc(50% - 1px);
-		left: 10px;
-		transition: 0.3s ease-in-out;
-		&:before {
-			content: '';
-			width: 30px;
-			height: 2px;
-			background: $color2;
-			position: absolute;
-			top: calc(50% - 1px);
-			transition: 0.3s ease-in-out;
-			margin-top: -10px;
-		}
-		&:after {
-			content: '';
-			width: 30px;
-			height: 2px;
-			background: $color2;
-			position: absolute;
-			top: calc(50% - 1px);
-			transition: 0.3s ease-in-out;
-			margin-top: 10px;
-		}
-	  }
-	  @include max(768px) {
-		display: block;
-	  }
-	}
-	&__toggle.is-active{
-		span{
-			background: $colorred;
-			&:before{
-				transform:rotate(135deg);
-				box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-				margin-top:0;
-			}
-			&:after{
-				transform:rotate(225deg);
-				box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-				margin-top:0;
-			}
-		}
-	}
-	@include max(768px) {
-	  padding: 10px 0;
-	  position: relative;
-	}
+    width: 100%;
+    background: $colorred;
+    transition: 0.3s ease-in-out;
+    &__box {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include max(1200px) {
+            padding: 0 15px;
+        }
+    }
+    &__toggle {
+        position: relative;
+        width: 50px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid $color2;
+        overflow: hidden;
+        display: none;
+        span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: $color2;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 10px;
+            transition: 0.3s ease-in-out;
+            &:before {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background: $color2;
+                position: absolute;
+                top: calc(50% - 1px);
+                transition: 0.3s ease-in-out;
+                margin-top: -10px;
+            }
+            &:after {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background: $color2;
+                position: absolute;
+                top: calc(50% - 1px);
+                transition: 0.3s ease-in-out;
+                margin-top: 10px;
+            }
+        }
+        @include max(768px) {
+            display: block;
+        }
+    }
+    &__toggle.is-active {
+        span {
+            background: $colorred;
+            &:before {
+                transform: rotate(135deg);
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+                margin-top: 0;
+            }
+            &:after {
+                transform: rotate(225deg);
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+                margin-top: 0;
+            }
+        }
+    }
+    @include max(768px) {
+        padding: 10px 0;
+        position: relative;
+    }
 }
-  

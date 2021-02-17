@@ -182,6 +182,10 @@ form label {
     .l-container {
       padding: 0 15px; } }
 
+body {
+  background: url(../images/bg-content.png) repeat center top;
+  background-color: #fef0cb; }
+
 /*------------------------------------------------------------
 	Header
 ------------------------------------------------------------*/
@@ -206,7 +210,8 @@ form label {
     height: 40px;
     border-radius: 5px;
     border: 1px solid #fff;
-    overflow: hidden; }
+    overflow: hidden;
+    display: none; }
     .c-header__toggle span {
       display: block;
       width: 30px;
@@ -259,7 +264,8 @@ form label {
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background: #ccc; }
+  background: #c1000f;
+  height: 400px; }
 
 /*------------------------------------------------------------
 	Side
@@ -286,8 +292,15 @@ form label {
     flex-wrap: wrap; }
     .c-nav__list > li {
       padding: 27px 0; }
+      @media screen and (max-width: 768px) {
+        .c-nav__list > li {
+          padding: 15px 0;
+          border-bottom: 1px solid #ccc; } }
       .c-nav__list > li + li {
         margin-left: 39px; }
+        @media screen and (max-width: 768px) {
+          .c-nav__list > li + li {
+            margin-left: 0; } }
       @media screen and (min-width: 769px) {
         .c-nav__list > li:hover {
           transform: scale(1);
@@ -343,13 +356,15 @@ form label {
         position: absolute;
         right: 0;
         top: calc(50% - 3px); }
+    @media screen and (max-width: 768px) {
+      .c-nav__list {
+        display: block; } }
   @media screen and (max-width: 768px) {
     .c-nav {
       background: #c1000f;
-      position: static;
-      display: none;
+      position: fixed;
       top: 71px;
-      right: 0;
+      right: -100%;
       width: 100%;
       z-index: 10;
       padding: 0 20px 20px;
@@ -358,8 +373,9 @@ form label {
 
 @media screen and (max-width: 768px) {
   .c-nav.is-active {
-    position: fix;
-    display: inline-block; } }
+    position: absolute;
+    right: 0;
+    opacity: 1; } }
 
 /*------------------------------------------------------------
 	Table
@@ -373,3 +389,106 @@ form label {
 /*------------------------------------------------------------
 	Other
 ------------------------------------------------------------*/
+.c-breadcrumb {
+  display: flex;
+  align-items: center;
+  padding: 23px 0 0; }
+  .c-breadcrumb li {
+    font-size: 16px;
+    line-height: 1;
+    color: #333;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 8px; }
+    .c-breadcrumb li + li {
+      padding-left: 12px; }
+      .c-breadcrumb li + li::before {
+        content: '';
+        width: 6px;
+        height: 10px;
+        background: url(../images/chevron-right-icon.png) no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 5px); }
+    .c-breadcrumb li a {
+      color: #333;
+      text-decoration: none; }
+
+/*------------------------------------------------------------
+	Table
+------------------------------------------------------------*/
+.c-banner {
+  width: 100%;
+  height: 150px;
+  background: url(../images/bg-title-faq.jpg) repeat-x center top;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+/*------------------------------------------------------------
+	Page TERMS value
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+	Page TERMS OF USE
+------------------------------------------------------------*/
+.p-terms {
+  padding: 78px 0; }
+  .p-terms01 {
+    padding: 85px 100px 90px;
+    margin-bottom: 107px;
+    position: relative; }
+    .p-terms01::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #ffffff repeat-x center top;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1; }
+    .p-terms01__box {
+      margin: 50px 0 0;
+      padding: 105px 40px 40px 50px;
+      position: relative;
+      z-index: 3; }
+      .p-terms01__box::before {
+        content: '';
+        border: 1px solid #c1000f;
+        width: calc(100% - 11px);
+        height: 100%;
+        background-size: contain;
+        position: absolute;
+        left: 9px;
+        top: 0;
+        z-index: 0; }
+      .p-terms01__box::after {
+        content: '';
+        width: 24px;
+        height: 25px;
+        background: url(/assets/images/terms/bg-box.jpg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 0; }
+      .p-terms01__box--ttl {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background: url(/assets/images/terms/ttl.png) no-repeat;
+        width: 392px;
+        height: 63px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 13px 0 0 20px;
+        color: #ffffff; }
+      .p-terms01__box--content .text {
+        font-size: 16px;
+        font-family: "HiraKakuPro";
+        color: #333333;
+        line-height: 2;
+        text-align: justifyLeft;
+        line-height: 32px;
+        position: relative;
+        z-index: 3; }

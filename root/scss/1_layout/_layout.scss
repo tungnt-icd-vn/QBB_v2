@@ -1,17 +1,24 @@
 /*------------------------------------------------------------
 	Layout
 ------------------------------------------------------------*/
+
 .l-main {
-	width: 100%;
-	min-height: 600px;
-	color: $color1;
-	@include flex-center;
+    width: 100%;
+    min-height: 600px;
+    color: $color1;
+    @include flex-center;
 }
+
 .l-container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	@include max(1200px) {
-		padding: 0 15px;
-	}
- }
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include max(1200px) {
+        padding: 0 15px;
+    }
+}
+
+body {
+    background: url(../images/bg-content.png) repeat center top;
+    background-color: #fef0cb;
+}
