@@ -1,0 +1,348 @@
+//faq 
+$colornamefaq: #c1000f;
+$collapsible_question: #333333;
+$collapsible_bg: #fcc92e;
+.p-faq {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 119px;
+    padding-top: 59px;
+    position: relative;
+    &__img {
+        img {
+            &:nth-of-type(1) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include max(768px) {
+                    width: 31%;
+                }
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 128px;
+                left: -84px;
+                @include max(1024px) {
+                    transform: scale(0.8);
+                    left: -75px;
+                }
+                @include max(768px) {
+                    transform: scale(0.6);
+                    left: -67px;
+                }
+            }
+            &:nth-of-type(3) {
+                position: absolute;
+                bottom: -77px;
+                right: 14px;
+                @include max(1024px) {
+                    transform: scale(0.8);
+                    bottom: -70px;
+                }
+                include max(768px) {
+                    transform: scale(0.6);
+                }
+            }
+        }
+    }
+    &__icon {
+        position: absolute;
+        @include max(1800px) {
+            .img {
+                width: 70%;
+            }
+        }
+        @include max(1024px) {
+            .img {
+                width: 55%;
+            }
+        }
+        @include max(992px) {
+            .img {
+                width: 48%;
+            }
+        }
+        &--01 {
+            right: 106px;
+            top: 615px;
+            @include max(1440px) {
+                right: 12px;
+                text-align: right;
+            }
+            @include max(1200px) {
+                text-align: right;
+            }
+        }
+        &--07 {
+            right: 36px;
+            top: 521px;
+            @include max(1440px) {
+                right: 0;
+            }
+            @include max(1200px) {
+                text-align: right;
+            }
+        }
+        &--02 {
+            left: 35px;
+            top: 861px;
+            @include max(1440px) {
+                left: 12px;
+                text-align: left;
+            }
+            @include max(1200px) {
+                left: 0;
+                text-align: left;
+            }
+            @include max(1024px) {
+                left: 3px;
+            }
+            @include max(768px) {
+                left: 0;
+                text-align: left;
+            }
+        }
+        &--03 {
+            right: 115px;
+            top: 1853px;
+        }
+        &--04 {
+            left: 43px;
+            top: 2486px;
+            @include max(1024px) {
+                text-align: left;
+                left: 0;
+            }
+        }
+        &--05 {
+            bottom: 0;
+            left: 203px;
+            @include max(1800px) {
+                left: 50px;
+            }
+            @include max(1440px) {
+                left: 10px;
+            }
+            @include max(1200px) {
+                left: 3px;
+            }
+            @include max(1024px) {
+                left: 0;
+            }
+        }
+        &--08 {
+            bottom: 0;
+            left: 208px;
+            @include max(1440px) {
+                left: 0;
+            }
+            @include max(1200px) {
+                left: 3px;
+            }
+            @include max(1024px) {
+                left: 0;
+            }
+        }
+        &--06 {
+            right: 96px;
+            bottom: 369px;
+            @include max(1024px) {
+                right: 0;
+            }
+            @include max(1200px) {
+                right: 6px;
+            }
+        }
+    }
+    &__ttl {
+        color: $colornamefaq;
+        font-size: 40px;
+        display: grid;
+        padding: 45px 0 46px 0;
+        line-height: 0.8;
+        letter-spacing: -2.3px;
+        &::before {
+            content: url(../../assets/images/name-top.png);
+            padding-bottom: 38px;
+        }
+    }
+    .c-title01 {
+        margin-top: 61px;
+        margin-bottom: 47px;
+        @include sp {
+            margin-top: 31px;
+            margin-bottom: 17px;
+        }
+    }
+    .p-faq__box {
+        border: 15px solid #d5ab2b;
+        padding: 39px 0;
+        background-image: url(../../assets/images/bg-child-faq.png);
+        background-color: #ffffff;
+        position: relative;
+        @include max(768px) {
+            border: 10px solid #d5ab2b;
+        }
+        .c-faq {
+            padding: 10px;
+            width: 87%;
+            margin: 0 auto;
+            @include max(768px) {
+                width: 100%;
+            }
+            &__item {
+                margin-bottom: 10px;
+                margin-top: 10px;
+                background-color: #fcc92e;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                overflow: hidden;
+                display: inline-block;
+                width: 100%;
+                behavior: url(../../assets/js/border-radius.htc);
+                border-collapse: collapse;
+                &--replyimg {
+                    padding-left: 12px;
+                    @include max(768px) {
+                        padding-left: 0;
+                        .img {
+                            transform: scale(0.7);
+                        }
+                    }
+                }
+                &--replytxt {
+                    padding-left: 19px;
+                    padding-top: 17px;
+                    font-size: 16px;
+                    line-height: 2;
+                    color: $collapsible_question;
+                    padding-right: 12px;
+                    @include max(768px) {
+                        font-size: 14px;
+                        padding-right: 0;
+                        padding-left: 0;
+                        line-height: 1.5;
+                    }
+                }
+            }
+            &__ttl {
+                cursor: pointer;
+                position: relative;
+                padding: 30px 72px 30px 102px;
+                width: 100%;
+                text-align: left;
+                outline: none;
+                font-weight: bold;
+                font-size: 20px;
+                color: #333333;
+                line-height: 1.6;
+                letter-spacing: -1.2px;
+                @include max(768px) {
+                    font-size: 18px;
+                    padding: 31px 68px 34px 79px;
+                }
+                @include max(425px) {
+                    padding: 15px 49px 13px 51px;
+                }
+                @include max(768px) {
+                    font-size: 16px;
+                }
+                &:after {
+                    content: "";
+                    background: url(../../assets/images/collapsible-after.png) no-repeat center;
+                    background-size: 100% 100%;
+                    width: 50px;
+                    height: 50px;
+                    top: calc(50% - 27px);
+                    position: absolute;
+                    right: 24px;
+                    transform-origin: center;
+                    @include max(768px) {
+                        width: 42px;
+                        height: 42px;
+                        top: calc(50% - 21px);
+                        right: 6px;
+                    }
+                    @include max(767px) {
+                        width: 30px;
+                        height: 30px;
+                        top: calc(50% - 15px);
+                    }
+                }
+                &:before {
+                    content: "";
+                    background: url(../../assets/images/question.png) no-repeat center;
+                    background-size: 100% 100%;
+                    width: 39px;
+                    height: 53px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    padding-right: 19px;
+                    top: calc(50% - 27px);
+                    position: absolute;
+                    left: 27px;
+                    transform-origin: center;
+                    @include max(768px) {
+                        width: 31px;
+                        height: 45px;
+                        top: calc(50% - 22px);
+                        left: 8px;
+                    }
+                    @include max(425px) {
+                        width: 23px;
+                        height: 37px;
+                    }
+                    @include max(767px) {
+                        width: 33px;
+                        height: 29px;
+                        padding: 0;
+                        top: 10px;
+                    }
+                }
+            }
+            &__content {
+                padding: 0 25px;
+                display: none;
+                box-sizing: border-box;
+                @include max(425px) {
+                    padding: 0 15px;
+                }
+                &.is-open {
+                    padding-bottom: 25px;
+                }
+            }
+            &__main {
+                display: flex;
+                border-radius: 15px;
+                padding: 20px 10px 33px 10px;
+                background-color: #fff;
+                border: 1.5px dashed red;
+                font-size: 16px;
+                color: rgb(51, 51, 51);
+                font-weight: 500;
+                text-align: justify;
+                @include max(768px) {
+                    padding: 20px 10px 33px 0px;
+                }
+            }
+        }
+    }
+    .is-none {
+        display: none;
+        transition: 0.3s;
+    }
+    .is-active {
+        margin-bottom: 31px;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: $collapsible_bg;
+        min-height: 200px;
+        .c-faq__ttl {
+            &:after {
+                transform: rotate(45deg);
+                transition: 0.3s;
+            }
+        }
+    }
+}

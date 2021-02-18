@@ -16,6 +16,15 @@
     @include max(1200px) {
         padding: 0 15px;
     }
+    &--faq {
+        margin: 0 auto;
+        @include max(1440px) {
+            max-width: 85%;
+        }
+        @include min(1200px) {
+            width: 1200px;
+        }
+    }
 }
 
 body {
