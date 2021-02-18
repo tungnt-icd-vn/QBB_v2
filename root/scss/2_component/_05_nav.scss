@@ -67,17 +67,17 @@
                         }
                     }
                 }
-            }
-            .sub-menu.is-active {
-                @include max(768px) {
-                    padding: 20px 30px;
-                    width: calc(100% + 60px);
-                    margin-top: 10px;
-                    margin-left: -20px;
-                    position: unset;
-                    transform: scale(1);
-                    opacity: 1;
-                    overflow: hidden;
+                &.is-active {
+                    @include max(768px) {
+                        padding: 20px 30px;
+                        width: calc(100% + 60px);
+                        margin-top: 10px;
+                        margin-left: -20px;
+                        position: unset;
+                        transform: scale(1);
+                        opacity: 1;
+                        overflow: hidden;
+                    }
                 }
             }
             .icon-child {
@@ -87,6 +87,12 @@
                 position: absolute;
                 right: 0;
                 top: calc(50% - 3px);
+                &.is-active {
+                    @include max(768px) {
+                        top: calc(10% - 3px);
+                        transform: rotate(178deg);
+                    }
+                }
             }
         }
         @include max(768px) {
@@ -104,12 +110,11 @@
         opacity: 0;
         border-top: 1px solid #fff;
     }
-}
-
-.c-nav.is-active {
-    @include max(768px) {
-        position: absolute;
-        right: 0;
-        opacity: 1;
+    &.is-active {
+        @include max(768px) {
+            position: absolute;
+            right: 0;
+            opacity: 1;
+        }
     }
 }
