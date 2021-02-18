@@ -7,5 +7,76 @@
     padding: 50px 0;
     text-align: center;
     background: #c1000f;
-    height: 400px;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    &__nav {
+        padding: 47px 0 0 12px;
+        li {
+            margin-bottom: 15px;
+            a {
+                font-size: 16px;
+                line-height: 1;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400;
+                padding-left: 22px;
+                position: relative;
+                text-decoration: none;
+                &::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    background: url(../../assets/images/arrow02.png) no-repeat center;
+                    background-size: 100%;
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__face {
+        color: #1877f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29.5%;
+        height: 435px;
+        background: #fff;
+        @include max(768px) {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+    &__insta {
+        color: #1877f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29.5%;
+        height: 435px;
+        background: #fff;
+        margin-left: 35px;
+        @include max(768px) {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 30px;
+            margin-left: 0;
+        }
+    }
+    &__info {
+        text-align: left;
+        width: calc(41% - 35px);
+        padding-right: 35px;
+        @include max(768px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
 }

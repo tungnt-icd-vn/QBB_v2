@@ -36,6 +36,15 @@
         .is-child {
             padding-right: 20px;
             position: relative;
+            @include min(768px) {
+                &:hover {
+                    .sub-menu {
+                        transform: scale(1);
+                        transform-origin: top;
+                        opacity: 1;
+                    }
+                }
+            }
             .sub-menu {
                 width: 240px;
                 position: absolute;
@@ -69,7 +78,7 @@
                 }
                 &.is-active {
                     @include max(768px) {
-                        padding: 20px 30px;
+                        padding: 0 30px;
                         width: calc(100% + 60px);
                         margin-top: 10px;
                         margin-left: -20px;

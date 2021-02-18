@@ -272,8 +272,71 @@ body {
   width: 100%;
   padding: 50px 0;
   text-align: center;
-  background: #c1000f;
-  height: 400px; }
+  background: #c1000f; }
+  .c-footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+  .c-footer__nav {
+    padding: 47px 0 0 12px; }
+    .c-footer__nav li {
+      margin-bottom: 15px; }
+      .c-footer__nav li a {
+        font-size: 16px;
+        line-height: 1;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        padding-left: 22px;
+        position: relative;
+        text-decoration: none; }
+        .c-footer__nav li a::before {
+          content: '';
+          width: 12px;
+          height: 12px;
+          background: url(../../assets/images/arrow02.png) no-repeat center;
+          background-size: 100%;
+          position: absolute;
+          top: calc(50% - 6px);
+          left: 0; }
+  .c-footer__face {
+    color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29.5%;
+    height: 435px;
+    background: #fff; }
+    @media screen and (max-width: 768px) {
+      .c-footer__face {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px; } }
+  .c-footer__insta {
+    color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 29.5%;
+    height: 435px;
+    background: #fff;
+    margin-left: 35px; }
+    @media screen and (max-width: 768px) {
+      .c-footer__insta {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+        margin-left: 0; } }
+  .c-footer__info {
+    text-align: left;
+    width: calc(41% - 35px);
+    padding-right: 35px; }
+    @media screen and (max-width: 768px) {
+      .c-footer__info {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px; } }
 
 /*------------------------------------------------------------
 	Side
@@ -323,6 +386,11 @@ body {
     .c-nav__list .is-child {
       padding-right: 20px;
       position: relative; }
+      @media screen and (min-width: 768px) {
+        .c-nav__list .is-child:hover .sub-menu {
+          transform: scale(1);
+          transform-origin: top;
+          opacity: 1; } }
       .c-nav__list .is-child .sub-menu {
         width: 240px;
         position: absolute;
@@ -352,7 +420,7 @@ body {
               color: #ccc; }
         @media screen and (max-width: 768px) {
           .c-nav__list .is-child .sub-menu.is-active {
-            padding: 20px 30px;
+            padding: 0 30px;
             width: calc(100% + 60px);
             margin-top: 10px;
             margin-left: -20px;
