@@ -982,3 +982,25 @@ body {
     .p-faq .is-active .c-faq__ttl:after {
       transform: rotate(45deg);
       transition: 0.3s; }
+
+.p-contact01 {
+  width: calc(100% - 13px);
+  margin-left: auto;
+  background: url(../../assets/images/contact/bg03.jpg) repeat center;
+  border-radius: 20px;
+  padding: 30px 40px 40px 20px;
+  margin-top: 78px;
+  position: relative; }
+  .p-contact01__inner {
+    height: 100vh;
+    background-color: #fff; }
+  .p-contact01::before {
+    content: '';
+    width: 71px;
+    height: calc(100% - 132px);
+    background: url(../../assets/images/contact/icon01.png) repeat-y right top;
+    background-size: 71px 68px;
+    position: absolute;
+    left: -13px;
+    top: 66px;
+    z-index: 3; }
