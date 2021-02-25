@@ -19,16 +19,16 @@
                 border-bottom: 2px dotted #b3a99d;
             }
         }
-    }
-    &::before {
-        content: '';
-        width: 71px;
-        height: calc(100% - 132px);
-        background: url(../../assets/images/contact/icon01.png) repeat-y right top;
-        background-size: 71px 68px;
-        position: absolute;
-        left: -13px;
-        top: 66px;
-        z-index: 3;
+        &::before {
+            content: '';
+            width: 71px;
+            height: calc(100% - 132px);
+            background: url(../../assets/images/contact/icon01.png) repeat-y right top;
+            background-size: 71px 68px;
+            position: absolute;
+            left: -13px;
+            top: 66px;
+            z-index: 3;
+        }
     }
 }

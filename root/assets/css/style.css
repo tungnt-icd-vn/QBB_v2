@@ -286,7 +286,7 @@ body {
         padding-left: 0;
         padding-bottom: 20px; } }
     .c-footer__nav li {
-      margin-bottom: 15px;
+      margin-bottom: 18px;
       position: relative; }
       .c-footer__nav li a {
         font-size: 16px;
@@ -1075,14 +1075,13 @@ body {
     align-items: flex-start;
     padding: 31px 0;
     border-bottom: 2px dotted #b3a99d; }
-
-.p-contact::before {
-  content: '';
-  width: 71px;
-  height: calc(100% - 132px);
-  background: url(../../assets/images/contact/icon01.png) repeat-y right top;
-  background-size: 71px 68px;
-  position: absolute;
-  left: -13px;
-  top: 66px;
-  z-index: 3; }
+  .p-contact01::before {
+    content: '';
+    width: 71px;
+    height: calc(100% - 132px);
+    background: url(../../assets/images/contact/icon01.png) repeat-y right top;
+    background-size: 71px 68px;
+    position: absolute;
+    left: -13px;
+    top: 66px;
+    z-index: 3; }
