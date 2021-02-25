@@ -7,4 +7,9 @@ $(document).ready(function() {
         $(this).find('.sub-menu').toggleClass('is-active');
         $(this).find('.icon-child').toggleClass('is-active');
     });
+    //Menu Footer
+    $('.icon-sub').click(function() {
+        $(this).toggleClass('is-active');
+        $(this).parents('li').toggleClass('is-sub').find('.sub-menu').toggleClass('is-active');
+    });
 });
