@@ -24,14 +24,27 @@
                     opacity: 1;
                 }
             }
-        }
-        a {
-            color: $color2;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: normal;
-            font-family: "Poppins", sans-serif;
-            font-size: 16px;
+            a {
+                color: $color2;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-family: "Poppins", sans-serif;
+                font-size: 16px;
+                position: relative;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background: #fff;
+                    transition: transform 0.4s cubic-bezier(0.28, 0.38, 0, 0.81);
+                    transform: scale(0, 1);
+                    transform-origin: 100% 50%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
         }
         .is-child {
             padding-right: 20px;
