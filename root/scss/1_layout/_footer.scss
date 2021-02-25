@@ -7,6 +7,9 @@
     padding: 50px 0;
     text-align: center;
     background: #c1000f;
+    img {
+        max-width: 100%;
+    }
     &__inner {
         display: flex;
         flex-wrap: wrap;
@@ -53,10 +56,11 @@
                 overflow: 'hidden';
                 height: 0;
                 transition: 0.3s ease-in-out;
-                display: none;
+                opacity: 0;
+                @include min(1025px) {
+                    display: none;
+                }
                 li {
-                    margin-bottom: 0;
-                    margin-top: 15px;
                     padding-left: 22px;
                     a {
                         padding-left: 25px;
@@ -67,6 +71,19 @@
                             border-left: 1px solid #fff;
                             border-bottom: 1px solid #fff;
                             top: -3px;
+                        }
+                    }
+                }
+                &.is-active {
+                    height: 100%;
+                    opacity: 1;
+                    transition: 0.3s ease-in-out;
+                    li {
+                        background: unset;
+                        a {
+                            &::before {
+                                top: 8px;
+                            }
                         }
                     }
                 }
@@ -82,13 +99,23 @@
                 right: 2px;
                 z-index: 3;
                 display: none;
+                @include max(768px) {
+                    width: 32px;
+                    height: 32px;
+                    background: rgba(255, 255, 255, 0.1);
+                    display: flex;
+                }
+                &.is-active {
+                    transform: rotate(178deg);
+                }
             }
             @include min(1025px) {
                 &:hover {
                     .sub-menu {
+                        padding-top: 15px;
                         height: auto;
                         display: block;
-                        transition: 0.5s ease-in-out;
+                        opacity: 1;
                     }
                 }
             }
