@@ -94,48 +94,95 @@
     <main class="p-products">
         <div class="l-container">
             <div class="p-products01">
-                <div class="c-list01">
-                    <div class="c-list01__item">
+                <ul class="c-list01">
+                    <li class="c-list01__item">
                         <a href="#">
                             <div class="c-list01__img">
                                 <img src="assets/images/products/list01.png" alt="product">
                             </div>
                             <h3 class="c-list01__ttl">Phô mai tráng miệng vị Vanilla</h3>
                         </a>
-                    </div>
-                    <div class="c-list01__item">
+                    </li>
+                    <li class="c-list01__item">
                         <a href="#">
                             <div class="c-list01__img">
                                 <img src="assets/images/products/list01.png" alt="product">
                             </div>
-                            <h3 class="c-list01__ttl">Phô mai tráng miệng vị Vanilla</h3>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla, Phô mai tráng miệng vị Vanilla</h3>
                         </a>
-                    </div>
-                    <div class="c-list01__item">
+                    </li>
+                    <li class="c-list01__item">
                         <a href="#">
                             <div class="c-list01__img">
                                 <img src="assets/images/products/list01.png" alt="product">
                             </div>
-                            <h3 class="c-list01__ttl">Phô mai tráng miệng vị Vanilla</h3>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
                         </a>
-                    </div>
-                    <div class="c-list01__item">
+                    </li>
+                    <li class="c-list01__item">
                         <a href="#">
                             <div class="c-list01__img">
                                 <img src="assets/images/products/list01.png" alt="product">
                             </div>
-                            <h3 class="c-list01__ttl">Phô mai tráng miệng vị Vanilla</h3>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
                         </a>
-                    </div>
-                    <div class="c-list01__item">
+                    </li>
+                    <li class="c-list01__item">
                         <a href="#">
                             <div class="c-list01__img">
                                 <img src="assets/images/products/list01.png" alt="product">
                             </div>
-                            <h3 class="c-list01__ttl">Phô mai tráng miệng vị Vanilla</h3>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
                         </a>
-                    </div>
-                </div>
+                    </li>
+                    <li class="c-list01__item">
+                        <a href="#">
+                            <div class="c-list01__img">
+                                <img src="assets/images/products/list01.png" alt="product">
+                            </div>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
+                            <span class="c-list01__time">Phiên bản giới hạn Xuân Hè</span>
+                        </a>
+                    </li>
+                    <li class="c-list01__item">
+                        <a href="#">
+                            <div class="c-list01__img">
+                                <img src="assets/images/products/list01.png" alt="product">
+                            </div>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
+                            <span class="c-list01__time">Phiên bản giới hạn Xuân Hè</span>
+                        </a>
+                    </li>
+                    <li class="c-list01__item">
+                        <a href="#">
+                            <div class="c-list01__img">
+                                <img src="assets/images/products/list01.png" alt="product">
+                            </div>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
+                            <span class="c-list01__time">Phiên bản giới hạn Xuân Hè</span>
+                        </a>
+                    </li>
+                    <li class="c-list01__item">
+                        <a href="#">
+                            <div class="c-list01__img">
+                                <img src="assets/images/products/list01.png" alt="product">
+                            </div>
+                            <span class="c-list01__new">New</span>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
+                            <span class="c-list01__time">Phiên bản giới hạn Xuân Hè</span>
+                        </a>
+                    </li>
+                    <li class="c-list01__item">
+                        <a href="#">
+                            <div class="c-list01__img">
+                                <img src="assets/images/products/list01.png" alt="product">
+                            </div>
+                            <span class="c-list01__new">New</span>
+                            <h3 class="c-list01__ttl js-height">Phô mai tráng miệng vị Vanilla</h3>
+                            <span class="c-list01__time">Phiên bản giới hạn Xuân Hè</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
@@ -204,7 +251,14 @@
     <!-- /footer -->
     <!-- init js -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/jquery.matchHeight" type="text/javascript"></script>
     <script src="assets/js/common.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-height')
+                .matchHeight({});
+        });
+    </script>
     <!-- init js -->
 </body>
 
